@@ -49,6 +49,7 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>What's New</heading>
+              <p>[May 31, 2024] The short version of our work <a href="https://arxiv.org/abs/2405.19874">Is In-Context Learning Sufficient for Instruction Following in LLMs?</a> is available online!</p>
               <p>[May 02, 2024] One work on data selection for Instruction Fine-Tuning LLMs was accepted to <a href="https://icml.cc/">ICML 2024</a>. See (some of) you in Vienna again!</p>
               <p>[Mar 04, 2024] Our work <a href="https://arxiv.org/abs/2402.04833">Long Is More for Alignment: A Simple but Tough-to-Beat Baseline for Instruction Fine-Tuning</a> was accepted to Workshop <a href="https://dmlr.ai/">DMLR@ICLR'24</a>. Many thanks to anonymous reviewers for their constructive and helpful reviews!</p>
               <p>[Feb 29, 2024] I successfully defended my master thesis with a perfect grade of 6.0/6.0 and received nominations for EPFL Master Thesis Awards. Great thanks to my committee: <a href="https://people.epfl.ch/nicolas.flammarion?lang=en">Nicolas Flammarion</a>, <a href="https://people.epfl.ch/giancarlo.ferraritrecate">Giancarlo Ferrari Trecate</a>, <a href="https://tlin-taolin.github.io/">Tao Lin</a>, and my supervisors: <a href="https://www.andriushchenko.me/">Maksym Andriushchenko</a>, <a href="https://scholar.google.com/citations?user=laq9cq0AAAAJ&hl=zh-CN">Francesco Croce</a>.</p>
@@ -71,6 +72,42 @@
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="icl_stop()" onmouseover="icl_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='icl_image'>
+                  <img src='images/icl_alignment.jpeg' width="160"></div>
+                <img src='images/icl_alignment.jpeg' width="160">
+              </div>
+              <script type="text/javascript">
+                function icl_start() {
+                  document.getElementById('icl_image').style.opacity = "1";
+                }
+  
+                function icl_stop() {
+                  document.getElementById('icl_image').style.opacity = "0";
+                }
+                icl_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2405.19874">
+                <papertitle>Is In-Context Learning Sufficient for Instruction Following in LLMs?</papertitle>
+              </a>
+              <br>
+              <strong>Hao Zhao</strong>, Maksym Andriushchenko, Francesco Croce, Nicolas Flammarion
+              <br>
+              <em>Under review</em>
+              <br>
+              [<a href="https://arxiv.org/abs/2405.19874">arXiv</a>]
+              [<a href="https://github.com/tml-epfl/icl-alignment">Code</a>]
+              <p></p>
+              <p>
+                We uncover that, unlike for tasks such as classification, translation, or summarization, adding more ICL demonstrations for long-context LLMs does not systematically improve instruction following performance, even with more sophisticated approaches. Moreover, we show that for instruction-following tasks, the demonstrations need to be carefully chosen and of high quality, with correct answers to each question, which departs from findings in prior work (<a href="https://arxiv.org/abs/2202.12837">Min et al., 2022</a>).
+              </p>
+            </td>
+          </tr>
           
           <tr onmouseout="lima_stop()" onmouseover="lima_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -99,7 +136,6 @@
               <br>
               <em>ICML 2024, abridged in Workshop DMLR@ICLR'24</em>
               <br>
-              <!-- <em>Links:</em> -->
               [<a href="https://arxiv.org/abs/2402.04833">arXiv</a>]
               [<a href="https://huggingface.co/datasets/HuggingFaceH4/OpenHermes-2.5-1k-longest">HuggingFace</a>]
               [<a href="https://github.com/tml-epfl/long-is-more-for-alignment">Code</a>]
