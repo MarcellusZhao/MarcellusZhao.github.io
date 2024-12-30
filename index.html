@@ -151,7 +151,7 @@
               [<a href="https://github.com/tml-epfl/long-is-more-for-alignment">Code</a>]
               <p></p>
               <p>
-                We show that filtering via length heuristics is an effective and efficient approach to select instruction tuning data for alignment. In addition, we propose a lightweight refinement of long instructions which can further improve the abilities of the fine-tuned LLMs. In particular, we obtain the 2nd highest-ranked Llama-2-7B-based model on AlpacaEval 2.0 while training on only 1,000 examples and no extra preference data.
+                Prior works demonstrate that instruction fine-tuning (IFT) of base LLMs over multi-million-example datasets enables them to fluently interact with human users. We show that filtering via length heuristics is an effective and efficient approach to select instruction tuning data for alignment, and find that fine-tuning on 1K instructions with the longest responses from large-scale IFT datasets, such as Alpaca, outperforms fine-tuning on full datasets. It validates the <a href="https://arxiv.org/abs/2305.11206">Superficial Alignment Hypothesis</a>, which suggests that very few samples are sufficient to teach base LLMs to follow natural language instructions. In addition, we propose to refine pre-selected examples using GPT-4-Turbo, based on its exceptional judging and introspecting capabilities. The resulting dataset, consisting of only 1K instruction-response pairs, yielded competitive results on AlpacaEval 2.0 and MT-Bench compared to complex alignment approaches like RLHF and DPO.
               </p>
             </td>
           </tr>
